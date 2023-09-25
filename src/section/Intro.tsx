@@ -2,7 +2,6 @@ import styled from "styled-components";
 import Rent from "../assets/rent.png";
 import FaceMaker from "../assets/facemaker.png";
 import Arum from "../assets/arum.png";
-import RightFix from "./RightFix";
 
 export default function Intro() {
   return (
