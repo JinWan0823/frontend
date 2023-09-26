@@ -107,6 +107,7 @@ const Wrapper = styled.div`
       transform: scale(1);
       cursor: pointer;
       position: relative;
+      border: 1px solid #07788c;
     }
   }
 `;
