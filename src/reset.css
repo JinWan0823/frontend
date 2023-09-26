@@ -122,10 +122,20 @@ table {
 }
 
 body {
-  background-color: #e6e5e7;
+  background-color: #000;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-h1 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Oswald", sans-serif;
+  color: #fff;
   font-weight: 700;
 }
