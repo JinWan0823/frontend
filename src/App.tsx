@@ -1,4 +1,4 @@
-import Intro from "./section/Intro";
+import Intro from "./intro/Intro";
 
 function App() {
   return (
