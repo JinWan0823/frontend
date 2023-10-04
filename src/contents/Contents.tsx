@@ -1,11 +1,14 @@
 import styled from "styled-components";
 import List from "./list";
+import Banner from "../assets/banner.png";
 
 export default function Contents() {
   return (
     <>
       <ContentsWrap>
-        <div className="img-wrap"></div>
+        <div className="img-wrap">
+          <img src={Banner} alt="banner-img" />
+        </div>
         <List />
       </ContentsWrap>
     </>
@@ -14,7 +17,7 @@ export default function Contents() {
 
 const ContentsWrap = styled.div`
   width: 100%;
-  margin-top: 24px;
+  margin-top: 40px;
 
   h3 {
     font-size: 32rem;
@@ -25,7 +28,10 @@ const ContentsWrap = styled.div`
 
   .img-wrap {
     width: 1260px;
-    height: 220px;
-    background-color: #3d3d3d;
+    background-color: #000;
+    img {
+      width: 100%;
+      opacity: 0.55;
+    }
   }
 `;
