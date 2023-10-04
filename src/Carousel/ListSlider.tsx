@@ -7,6 +7,7 @@ import { useRef, useCallback } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons/faAngleRight";
+import ButtonComponent from "./Button";
 
 const carouselSettings = {
   dots: true,
@@ -47,7 +48,13 @@ export default function ListSlider() {
                     <span className="circle"></span> {item.content}
                   </li>
                 </ul>
-                <div className="btn-wrap"></div>
+                <div className="btn-wrap">
+                  {item.github ? (
+                    <ButtonComponent btn={item.github} cate="github" />
+                  ) : (
+                    ""
+                  )}
+                </div>
               </div>
               <div className="list-img">
                 <img src={item.thumb} alt={`${item.title}-img`} />
@@ -70,7 +77,7 @@ export default function ListSlider() {
 
 const SliderWrap = styled.div`
   width: 1440px;
-  margin: 40px auto;
+  margin: 80px auto;
   padding: 20px 0px;
   position: relative;
   .list {
@@ -83,7 +90,7 @@ const SliderWrap = styled.div`
     width: 45%;
     padding: 20px 10px 0px;
     h3 {
-      color: #ffbf35;
+      color: #07788c;
       font-size: 70rem;
     }
     ul {
@@ -102,7 +109,7 @@ const SliderWrap = styled.div`
         width: 10px;
         height: 10px;
         border-radius: 50%;
-        background-color: #ffbf35;
+        background-color: #07788c;
         margin-right: 18px;
         flex-shrink: 0;
         margin-top: 10px;
@@ -133,7 +140,7 @@ const SliderWrap = styled.div`
         opacity: 0.8;
       }
       &.slick-active button::before {
-        color: #ffbf35;
+        color: #07788c;
         opacity: 1;
       }
     }
@@ -153,7 +160,7 @@ const SliderWrap = styled.div`
     align-items: center;
     justify-content: center;
     color: #fff;
-    background-color: #ffbf35ab;
+    background-color: #07788cab;
     cursor: pointer;
     &:nth-of-type(1) {
       margin-right: 10px;
