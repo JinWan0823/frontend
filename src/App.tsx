@@ -1,3 +1,4 @@
+import ListSlider from "./Carousel/ListSlider";
 import BackCircle from "./commonComponents/BackCircle";
 import HeaderTabMenu from "./commonComponents/HeaderTabMenu";
 import Contents from "./contents/Contents";
@@ -10,6 +11,7 @@ function App() {
       <HeaderTabMenu />
       <Intro />
       <Contents />
+      <ListSlider />
     </>
   );
 }
