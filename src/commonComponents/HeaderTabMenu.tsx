@@ -1,5 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import { useState } from "react";
+import FullMenu from "./FullMenu";
 
 export default function HeaderTabMenu() {
   const [TabMenu, setTebMenu] = useState(false);
@@ -8,9 +9,12 @@ export default function HeaderTabMenu() {
   };
 
   return (
-    <HeaderTab onClick={TabOn} className={"burger-wrap"}>
-      <div className={"burger".concat(TabMenu ? " on" : "")}></div>
-    </HeaderTab>
+    <>
+      <HeaderTab onClick={TabOn} className={"burger-wrap"}>
+        <div className={"burger".concat(TabMenu ? " on" : "")}></div>
+      </HeaderTab>
+      <FullMenu toggleMenu={TabMenu} />
+    </>
   );
 }
 
