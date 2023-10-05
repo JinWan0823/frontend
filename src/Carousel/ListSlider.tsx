@@ -49,8 +49,23 @@ export default function ListSlider() {
                   </li>
                 </ul>
                 <div className="btn-wrap">
+                  {item.site ? (
+                    <ButtonComponent btn={item.site} cate="site" />
+                  ) : (
+                    ""
+                  )}
                   {item.github ? (
                     <ButtonComponent btn={item.github} cate="github" />
+                  ) : (
+                    ""
+                  )}
+                  {item.notion ? (
+                    <ButtonComponent btn={item.notion} cate="notion" />
+                  ) : (
+                    ""
+                  )}
+                  {item.youtube ? (
+                    <ButtonComponent btn={item.youtube} cate="youtube" />
                   ) : (
                     ""
                   )}
@@ -80,6 +95,11 @@ const SliderWrap = styled.div`
   margin: 80px auto;
   padding: 20px 0px;
   position: relative;
+
+  .slick-current {
+    z-index: 999999;
+  }
+
   .list {
     display: flex;
     align-items: flex-start;
@@ -119,10 +139,22 @@ const SliderWrap = styled.div`
 
   .list-img {
     width: 50%;
+    height: 620px;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      width: 3px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #b15e30;
+      border-radius: 10px;
+    }
+    &::-webkit-scrollbar-track {
+      background: #f8dccc;
+    }
     img {
       width: 100%;
-      height: 550px;
-      object-fit: cover;
     }
   }
 
@@ -167,6 +199,15 @@ const SliderWrap = styled.div`
     }
     svg {
       font-size: 40rem;
+    }
+  }
+
+  .btn-wrap {
+    margin-top: 30px;
+    display: flex;
+    flex-flow: row wrap;
+    a:not(:nth-of-type(1)) {
+      margin-left: 10px;
     }
   }
 `;
