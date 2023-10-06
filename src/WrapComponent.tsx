@@ -6,18 +6,32 @@ import Intro from "./intro/Intro";
 
 import { useRecoilValue } from "recoil";
 import { MenuState } from "./State/MenuState";
+import { useRef, useEffect } from "react";
 
 export default function WrapComponents() {
   const menuState = useRecoilValue(MenuState);
-  console.log(menuState);
+  const introSectionRef = useRef<HTMLDivElement | null>(null);
+  const sliderSectionRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (menuState[0]?.menu === "ABOUT" && introSectionRef.current) {
+      introSectionRef.current.scrollIntoView({ behavior: "smooth" });
+    } else if (menuState[0]?.menu === "PROJECT" && sliderSectionRef.current) {
+      sliderSectionRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [menuState]);
 
   return (
     <>
       <BackCircle />
       <HeaderTabMenu />
-      <Intro />
+      <div id="introSection" ref={introSectionRef}>
+        <Intro />
+      </div>
       <Contents />
-      <ListSlider />
+      <div id="SliderSection" ref={sliderSectionRef}>
+        <ListSlider />
+      </div>
     </>
   );
 }

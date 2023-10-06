@@ -13,7 +13,7 @@ export default function HeaderTabMenu() {
       <HeaderTab onClick={TabOn} className={"burger-wrap"}>
         <div className={"burger".concat(TabMenu ? " on" : "")}></div>
       </HeaderTab>
-      <FullMenu toggleMenu={TabMenu} />
+      <FullMenu toggleMenu={TabMenu} TabOn={TabOn} />
     </>
   );
 }
