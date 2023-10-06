@@ -4,6 +4,22 @@ interface BtnProps {
   btn: string;
   cate: string;
 }
+interface LinkBtnProps {
+  color: string;
+  $bg: string; // bg prop 추가
+}
+
+const LinkBtn = styled.a<LinkBtnProps>`
+  font-size: 18rem;
+  display: inline-block;
+  padding: 10px 34px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 800;
+  background-color: ${(props) => props.$bg};
+  color: ${(props) => props.color};
+  font-family: "Oswald", sans-serif;
+`;
 
 export default function ButtonComponent({ btn, cate }: BtnProps) {
   let text = "";
@@ -26,21 +42,8 @@ export default function ButtonComponent({ btn, cate }: BtnProps) {
     color = "#fff";
     bgColor = "#e34f26";
   }
-
-  const LinkBtn = styled.a`
-    font-size: 18rem;
-    display: inline-block;
-    padding: 10px 34px;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: 800;
-    background-color: ${bgColor};
-    color: ${color};
-    font-family: "Oswald", sans-serif;
-  `;
-
   return (
-    <LinkBtn href={btn} target="_blank">
+    <LinkBtn href={btn} target="_blank" color={color} $bg={bgColor}>
       {text}
     </LinkBtn>
   );

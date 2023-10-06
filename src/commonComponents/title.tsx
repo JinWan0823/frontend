@@ -7,11 +7,11 @@ interface TitleProps {
 export default function Title({ children }: TitleProps) {
   const color = children === "PORTFOLIO" ? "#07788C" : "#b15e30";
 
-  const Text = styled.h1`
-    font-size: 142rem;
-    padding: 30rem 20rem;
-    color: ${color};
-  `;
-
-  return <Text>{children}</Text>;
+  return <Text color={color}>{children}</Text>;
 }
+
+const Text = styled.h1`
+  font-size: 142rem;
+  padding: 30rem 20rem;
+  color: ${(props) => props.color};
+`;
