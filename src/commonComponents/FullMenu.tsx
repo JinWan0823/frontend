@@ -4,6 +4,7 @@ import { MenuState, MenuType } from "../State/MenuState";
 
 interface Props {
   toggleMenu: boolean;
+  TabOn: () => void;
 }
 
 const menuItems: MenuType[] = [
@@ -12,7 +13,7 @@ const menuItems: MenuType[] = [
   { menu: "CONTACT" },
 ];
 
-export default function FullMenu({ toggleMenu }: Props) {
+export default function FullMenu({ toggleMenu, TabOn }: Props) {
   const setMenuState = useSetRecoilState(MenuState);
 
   const handleMenuItemClick = (selectedMenu: string) => {
@@ -27,6 +28,7 @@ export default function FullMenu({ toggleMenu }: Props) {
     );
 
     setMenuState(filteredMenuState);
+    TabOn();
   };
 
   return (
@@ -35,7 +37,7 @@ export default function FullMenu({ toggleMenu }: Props) {
         <ul>
           {menuItems.map((item) => (
             <li key={item.menu} onClick={() => handleMenuItemClick(item.menu)}>
-              <a href="#">{item.menu}</a>
+              <span>{item.menu}</span>
             </li>
           ))}
         </ul>
@@ -125,12 +127,13 @@ const MenuOverlay = styled.div`
       position: relative;
       opacity: 0;
       
-      a {
+      span {
         display: block;
         position: relative;
         color: #fff;
         text-decoration: none;
         font-size:110rem;
+        cursor:pointer;
         &:hover {
           color:#b15e30
         }
