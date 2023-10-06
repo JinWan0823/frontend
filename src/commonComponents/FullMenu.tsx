@@ -1,23 +1,43 @@
 import styled from "styled-components";
+import { useSetRecoilState } from "recoil";
+import { MenuState, MenuType } from "../State/MenuState";
 
 interface Props {
   toggleMenu: boolean;
 }
 
+const menuItems: MenuType[] = [
+  { menu: "ABOUT" },
+  { menu: "PROJECT" },
+  { menu: "CONTACT" },
+];
+
 export default function FullMenu({ toggleMenu }: Props) {
+  const setMenuState = useSetRecoilState(MenuState);
+
+  const handleMenuItemClick = (selectedMenu: string) => {
+    const updatedMenuState: MenuType[] = menuItems.map((item) => {
+      if (item.menu === selectedMenu) {
+        return { menu: item.menu };
+      }
+      return { menu: "" };
+    });
+    const filteredMenuState = updatedMenuState.filter(
+      (item) => item.menu !== ""
+    );
+
+    setMenuState(filteredMenuState);
+  };
+
   return (
     <MenuOverlay className={toggleMenu ? "on" : ""}>
       <nav className="menu-wrap">
         <ul>
-          <li>
-            <a href="">ABOUT</a>
-          </li>
-          <li>
-            <a href="">PROJECT</a>
-          </li>
-          <li>
-            <a href="">CONTACT</a>
-          </li>
+          {menuItems.map((item) => (
+            <li key={item.menu} onClick={() => handleMenuItemClick(item.menu)}>
+              <a href="#">{item.menu}</a>
+            </li>
+          ))}
         </ul>
       </nav>
     </MenuOverlay>
@@ -114,9 +134,7 @@ const MenuOverlay = styled.div`
         &:hover {
           color:#b15e30
         }
-        &:hover:after,
-         &:focus:after,
-         &:active:after {
+        &:hover::after {
            width: 100%;
          }
         

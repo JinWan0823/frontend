@@ -7,7 +7,7 @@ import { useRef, useCallback } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons/faAngleRight";
-import ButtonComponent from "./Button";
+import ButtonComponent from "./SIteBtn";
 
 const carouselSettings = {
   dots: true,
