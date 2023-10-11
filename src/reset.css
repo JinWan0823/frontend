@@ -85,6 +85,7 @@ video {
   font-size: 6.25%;
   vertical-align: baseline;
   box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
 }
 article,
 aside,
@@ -129,7 +130,9 @@ body {
   -ms-user-select: none;
   user-select: none;
 }
-
+button {
+  font-family: "Noto Sans KR", sans-serif;
+}
 h1,
 h2,
 h3,
