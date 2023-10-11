@@ -1,6 +1,7 @@
 import styled, { keyframes } from "styled-components";
 import { useState } from "react";
 import FullMenu from "./FullMenu";
+import UpBtn from "./UpBtn";
 
 export default function HeaderTabMenu() {
   const [TabMenu, setTebMenu] = useState(false);
@@ -10,6 +11,7 @@ export default function HeaderTabMenu() {
 
   return (
     <>
+      <UpBtn />
       <HeaderTab onClick={TabOn} className={"burger-wrap"}>
         <div className={"burger".concat(TabMenu ? " on" : "")}></div>
       </HeaderTab>
@@ -49,7 +51,7 @@ const HeaderTab = styled.div`
   height: 60px;
   z-index: 9999999999;
   cursor: pointer;
-  border-radius: 50%;
+  border-radius: 15px;
   background-color: #000;
   box-shadow: 0px 0px 3px 2px #868686;
   display: flex;

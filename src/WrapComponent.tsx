@@ -13,12 +13,15 @@ export default function WrapComponents() {
   const menuState = useRecoilValue(MenuState);
   const introSectionRef = useRef<HTMLDivElement | null>(null);
   const sliderSectionRef = useRef<HTMLDivElement | null>(null);
+  const contactSectionRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     if (menuState[0]?.menu === "ABOUT" && introSectionRef.current) {
       introSectionRef.current.scrollIntoView({ behavior: "smooth" });
     } else if (menuState[0]?.menu === "PROJECT" && sliderSectionRef.current) {
       sliderSectionRef.current.scrollIntoView({ behavior: "smooth" });
+    } else if (menuState[0]?.menu === "CONTACT" && contactSectionRef.current) {
+      contactSectionRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }, [menuState]);
 
@@ -30,10 +33,12 @@ export default function WrapComponents() {
         <Intro />
       </div>
       <Contents />
-      <div id="SliderSection" ref={sliderSectionRef}>
+      <div id="sliderSection" ref={sliderSectionRef}>
         <ListSlider />
       </div>
-      <Contact />
+      <div id="contactSection" ref={contactSectionRef}>
+        <Contact />
+      </div>
     </>
   );
 }
