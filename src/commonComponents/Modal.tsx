@@ -13,7 +13,7 @@ export default function Modal({ handleModal, modalCategory }: ModalProps) {
     if (category === "Kakao") {
       setText("카카오톡으로 연결하시겠습니까?");
     } else {
-      setText("클립보드에 복사를 완료했습니다.");
+      setText("클립보드에 복사했습니다.");
     }
   }, [category]);
 

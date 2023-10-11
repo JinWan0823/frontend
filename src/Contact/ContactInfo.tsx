@@ -1,11 +1,14 @@
 import styled from "styled-components";
 import DotList from "./DotList";
 import ContactBtn from "./ContactBtn";
+import ContactImg from "../assets/contact.png";
 
 export default function ContactInfo() {
   return (
     <InfoWrap>
-      <ImgWrap></ImgWrap>
+      <ImgWrap>
+        <img src={ContactImg} alt="contact-img" />
+      </ImgWrap>
       <MyInfo>
         <h3>Park JinWan</h3>
         <ul>
@@ -20,6 +23,9 @@ export default function ContactInfo() {
           />
         </ul>
         <ContactBtn />
+        <h3 style={{ marginTop: "40px", fontSize: "60rem", lineHeight: "1.1" }}>
+          Thank you for watching <br /> my portfolio
+        </h3>
       </MyInfo>
     </InfoWrap>
   );
@@ -35,9 +41,12 @@ const InfoWrap = styled.div`
 
 const ImgWrap = styled.div`
   width: 48%;
-  height: 640px;
   border-radius: 20px;
-  background-color: #fff;
+  overflow: hidden;
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
 `;
 
 const MyInfo = styled.div`

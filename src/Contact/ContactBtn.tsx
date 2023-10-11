@@ -89,7 +89,7 @@ const Button = styled.button`
   transform-style: preserve-3d;
   background-color: transparent;
   color: #fff;
-  box-shadow: 0 0 0 2px #fff, 0 0.425em 0 0 rgb(110, 107, 107);
+  box-shadow: 0 0 0 2px #fff, 0 0.425em 0 0 rgb(69 69 69);
   border-radius: 4px;
   &:hover {
     transform: translate(0, 0.42em);
