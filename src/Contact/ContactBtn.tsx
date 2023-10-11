@@ -2,29 +2,61 @@ import styled from "styled-components";
 import iconKakao from "../assets/icon/kakao-talk.png";
 import iconPhone from "../assets/icon/telephone.png";
 import iconMail from "../assets/icon/mail.png";
+import Modal from "../commonComponents/Modal";
+
+import { useState } from "react";
 
 export default function ContactBtn() {
+  const [openModal, setOpenModal] = useState(false);
+  const [modalCategory, setModalCategory] = useState("");
+
+  const handleCopyPhone = () => {
+    navigator.clipboard.writeText("010-9974-1134");
+    setModalCategory("Phone");
+    handleModal();
+  };
+
+  const handleCopyMail = () => {
+    navigator.clipboard.writeText("dhksl823@gmail.com");
+    setModalCategory("Mail");
+    handleModal();
+  };
+
+  const handleLinkKakao = () => {
+    setModalCategory("Kakao");
+    handleModal();
+  };
+
+  const handleModal = () => {
+    setOpenModal(!openModal);
+  };
+
   return (
-    <BtnWrap>
-      <div className="phoneBtn btn">
-        <Button className="pBtn">
-          <img src={iconPhone} alt="phone-icon" />
-          010-9974-1134
-        </Button>
-      </div>
-      <div className="kakaoBtn btn">
-        <Button className="kBtn">
-          <img src={iconKakao} alt="phone-icon" />
-          카카오톡
-        </Button>
-      </div>
-      <div className="mailBtn btn">
-        <Button className="mBtn">
-          <img src={iconMail} alt="phone-icon" />
-          이메일
-        </Button>
-      </div>
-    </BtnWrap>
+    <>
+      <BtnWrap>
+        <div className="phoneBtn btn">
+          <Button className="pBtn Phone" onClick={handleCopyPhone}>
+            <img src={iconPhone} alt="phone-icon" />
+            010-9974-1134
+          </Button>
+        </div>
+        <div className="kakaoBtn btn">
+          <Button className="kBtn kakao" onClick={handleLinkKakao}>
+            <img src={iconKakao} alt="phone-icon" />
+            카카오톡
+          </Button>
+        </div>
+        <div className="mailBtn btn">
+          <Button className="mBtn Mail" onClick={handleCopyMail}>
+            <img src={iconMail} alt="phone-icon" />
+            이메일
+          </Button>
+        </div>
+      </BtnWrap>
+      {openModal && (
+        <Modal handleModal={handleModal} modalCategory={modalCategory} />
+      )}
+    </>
   );
 }
 
