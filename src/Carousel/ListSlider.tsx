@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons/faAngleRight";
 import ButtonComponent from "./SIteBtn";
+import DotList from "../Contact/DotList";
 
 const carouselSettings = {
   dots: true,
@@ -38,15 +39,9 @@ export default function ListSlider() {
               <div className="info">
                 <h3>{item.title}</h3>
                 <ul>
-                  <li>
-                    <span className="circle"></span> {item.date}
-                  </li>
-                  <li>
-                    <span className="circle"></span> {item.skill}
-                  </li>
-                  <li>
-                    <span className="circle"></span> {item.content}
-                  </li>
+                  <DotList text={item.date}></DotList>
+                  <DotList text={item.skill}></DotList>
+                  <DotList text={item.content}></DotList>
                 </ul>
                 <div className="btn-wrap">
                   {item.site ? (
@@ -115,25 +110,6 @@ const SliderWrap = styled.div`
     }
     ul {
       margin-top: 40px;
-    }
-    li {
-      display: flex;
-      align-items: flex-start;
-      font-size: 20rem;
-      color: #fff;
-      margin-top: 12px;
-      word-break: keep-all;
-      line-height: 1.4;
-      span.circle {
-        display: block;
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background-color: #07788c;
-        margin-right: 18px;
-        flex-shrink: 0;
-        margin-top: 10px;
-      }
     }
   }
 

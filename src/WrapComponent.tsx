@@ -7,6 +7,7 @@ import Intro from "./intro/Intro";
 import { useRecoilValue } from "recoil";
 import { MenuState } from "./State/MenuState";
 import { useRef, useEffect } from "react";
+import Contact from "./Contact/Contact";
 
 export default function WrapComponents() {
   const menuState = useRecoilValue(MenuState);
@@ -32,6 +33,7 @@ export default function WrapComponents() {
       <div id="SliderSection" ref={sliderSectionRef}>
         <ListSlider />
       </div>
+      <Contact />
     </>
   );
 }

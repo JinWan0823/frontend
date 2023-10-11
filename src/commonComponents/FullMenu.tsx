@@ -37,7 +37,7 @@ export default function FullMenu({ toggleMenu, TabOn }: Props) {
         <ul>
           {menuItems.map((item) => (
             <li key={item.menu} onClick={() => handleMenuItemClick(item.menu)}>
-              <span>{item.menu}</span>
+              <h2>{item.menu}</h2>
             </li>
           ))}
         </ul>
@@ -127,8 +127,7 @@ const MenuOverlay = styled.div`
       position: relative;
       opacity: 0;
       
-      span {
-        display: block;
+      h2 {
         position: relative;
         color: #fff;
         text-decoration: none;
