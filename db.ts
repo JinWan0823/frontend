@@ -3,6 +3,8 @@ import FaceMaker from "./src/assets/slideImg/facemaker.png";
 import Arum from "./src/assets/slideImg/karum.png";
 import OliveRent from "./src/assets/slideImg/rentcar.png";
 import Nengtul from "./src/assets/slideImg/nengtul.png";
+import Toy from "./src/assets/toyproject.png";
+import Web from "./src/assets/slideImg/web.png";
 
 const ListData = {
   portfolio: [
@@ -67,7 +69,7 @@ const ListData = {
       id: 6,
       title: "TOY PROJECT",
       skill: "Toy Project02 - 계산기, 에디터, 3d Carousel, 무한스크롤 등",
-      thumb: Arum,
+      thumb: Toy,
       date: "Toy Project01 - 화살표 게임, 마우스 컨트롤 게임",
 
       content:
@@ -82,7 +84,7 @@ const ListData = {
       date: "기존 홈페이지를 개선하고 웹표준을 준수해 만든 반응형 홈페이지입니다.",
       skill: "잎사귀치과 / 시의원 / 파라다이스 호텔 / 카페 읍천리 / 카페게이트",
       content: "리아한의원 / 퓨린피부과 / E&C / 정우그룹",
-      thumb: Arum,
+      thumb: Web,
       leef: "https://lemonjw2.iwinv.net/lm02/",
       seoul: "https://lemonjw2.iwinv.net/lm03/",
       hotel: "https://lemonjw2.iwinv.net/lm04/",
