@@ -50,10 +50,27 @@ export default function ListSlider() {
                     ""
                   )}
                   {item.github ? (
-                    <ButtonComponent btn={item.github} cate="github" />
+                    <ButtonComponent btn={item.github} cate="Github" />
                   ) : (
                     ""
                   )}
+
+                  {item.github01 ? (
+                    <ButtonComponent btn={item.github01} cate="Github01" />
+                  ) : (
+                    ""
+                  )}
+                  {item.github02 ? (
+                    <ButtonComponent btn={item.github01} cate="Github02" />
+                  ) : (
+                    ""
+                  )}
+                  {item.github03 ? (
+                    <ButtonComponent btn={item.github01} cate="Github03" />
+                  ) : (
+                    ""
+                  )}
+
                   {item.notion ? (
                     <ButtonComponent btn={item.notion} cate="notion" />
                   ) : (
@@ -61,6 +78,51 @@ export default function ListSlider() {
                   )}
                   {item.youtube ? (
                     <ButtonComponent btn={item.youtube} cate="youtube" />
+                  ) : (
+                    ""
+                  )}
+                  {item.leef ? (
+                    <ButtonComponent btn={item.leef} cate="Site01" />
+                  ) : (
+                    ""
+                  )}
+                  {item.seoul ? (
+                    <ButtonComponent btn={item.seoul} cate="Site02" />
+                  ) : (
+                    ""
+                  )}
+                  {item.leef ? (
+                    <ButtonComponent btn={item.hotel} cate="Site03" />
+                  ) : (
+                    ""
+                  )}
+                  {item.leef ? (
+                    <ButtonComponent btn={item.cafe382} cate="Site04" />
+                  ) : (
+                    ""
+                  )}
+                  {item.leef ? (
+                    <ButtonComponent btn={item.cafegate} cate="Site05" />
+                  ) : (
+                    ""
+                  )}
+                  {item.leef ? (
+                    <ButtonComponent btn={item.lia} cate="Site06" />
+                  ) : (
+                    ""
+                  )}
+                  {item.leef ? (
+                    <ButtonComponent btn={item.skin} cate="Site07" />
+                  ) : (
+                    ""
+                  )}
+                  {item.leef ? (
+                    <ButtonComponent btn={item.ec} cate="Site08" />
+                  ) : (
+                    ""
+                  )}
+                  {item.leef ? (
+                    <ButtonComponent btn={item.jungwoo} cate="Site09" />
                   ) : (
                     ""
                   )}
@@ -173,6 +235,7 @@ const SliderWrap = styled.div`
     &:nth-of-type(1) {
       margin-right: 10px;
     }
+
     svg {
       font-size: 40rem;
     }
@@ -182,8 +245,14 @@ const SliderWrap = styled.div`
     margin-top: 30px;
     display: flex;
     flex-flow: row wrap;
+    a {
+      margin-top: 8px;
+    }
     a:not(:nth-of-type(1)) {
       margin-left: 10px;
+    }
+    a:nth-of-type(6) {
+      margin-left: 0px;
     }
   }
 `;

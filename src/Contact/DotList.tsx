@@ -21,7 +21,8 @@ const List = styled.li`
   color: #fff;
   margin-top: 12px;
   word-break: keep-all;
-  line-height: 1.4;
+  line-height: 1.5;
+  word-break: keep-all;
   span.circle {
     display: block;
     width: 10px;
