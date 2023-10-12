@@ -8,6 +8,7 @@ import { useRecoilValue } from "recoil";
 import { MenuState } from "./State/MenuState";
 import { useRef, useEffect } from "react";
 import Contact from "./Contact/Contact";
+import styled from "styled-components";
 
 export default function WrapComponents() {
   const menuState = useRecoilValue(MenuState);
@@ -26,7 +27,7 @@ export default function WrapComponents() {
   }, [menuState]);
 
   return (
-    <>
+    <Wrap>
       <BackCircle />
       <HeaderTabMenu />
       <div id="introSection" ref={introSectionRef}>
@@ -39,6 +40,19 @@ export default function WrapComponents() {
       <div id="contactSection" ref={contactSectionRef}>
         <Contact />
       </div>
-    </>
+    </Wrap>
   );
 }
+
+const Wrap = styled.div`
+  &::-webkit-scrollbar {
+    width: 3px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #b15e30;
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #f8dccc;
+  }
+`;

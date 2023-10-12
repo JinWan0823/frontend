@@ -25,14 +25,14 @@ export default function ButtonComponent({ btn, cate }: BtnProps) {
   let text = "";
   let color = "";
   let bgColor = "";
-  if (cate === "github") {
-    text = "Github";
+  if (cate === "Github") {
+    text = cate;
     color = "#fff";
     bgColor = "#764abc";
-  } else if (cate === "notion") {
-    text = "Notion";
-    color = "#333";
-    bgColor = "#fff";
+  } else if (cate.includes("Github")) {
+    text = cate;
+    color = "#fff";
+    bgColor = "#764abc";
   } else if (cate === "site") {
     text = "Site";
     color = "#333";
@@ -41,6 +41,10 @@ export default function ButtonComponent({ btn, cate }: BtnProps) {
     text = "Youtube";
     color = "#fff";
     bgColor = "#e34f26";
+  } else {
+    text = cate;
+    color = "#333";
+    bgColor = "#fff";
   }
   return (
     <LinkBtn href={btn} target="_blank" color={color} $bg={bgColor}>
