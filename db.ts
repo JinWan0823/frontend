@@ -17,7 +17,7 @@ const ListData = {
       date: "2023-07-08 ~ 2023-08-16",
       github: "https://github.com/nengtul/nengtul-frontend",
       notion:
-        "https://spice-expert-177.notion.site/5ecad1dcc16c4df5b81c18395a21e6bc?pvs=4",
+        "https://cottony-boron-ccf.notion.site/bf9e80d0c21d40e59b28ee9f5e13650a?pvs=4",
       site: "https://nengtul-frontend-iota.vercel.app/",
       skill: "React / TypeScript / Redux-persist / Styled-components",
       youtube: "https://www.youtube.com/watch?v=nAZUx73mwVU&t=71s",
@@ -31,9 +31,10 @@ const ListData = {
       skill: "React / TypeScript / TailwindCss / Firebase",
       date: "2023-06-01 ~ 2023-07-10",
       github: "https://github.com/JinWan0823/tripTogether",
-      site: "https://www.youtube.com/watch?v=ekboLw2p_2M",
+      site: "https://trip-together-apw04bp2z-jinwan0823.vercel.app/",
       youtube: "https://www.youtube.com/watch?v=ekboLw2p_2M",
-      notion: "",
+      notion:
+        "https://sapphire-loaf-f04.notion.site/Trip-Together-9b19a025516e465590ae4c824357f21c?pvs=4",
     },
     {
       id: 3,
