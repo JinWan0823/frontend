@@ -81,7 +81,7 @@ const ListData = {
     },
     {
       id: 7,
-      title: "ETC. WEB SITE",
+      title: "RESPONSIVE WEB",
       date: "기존 홈페이지를 개선하고 웹표준을 준수해 만든 반응형 홈페이지입니다.",
       skill: "잎사귀치과 / 시의원 / 파라다이스 호텔 / 카페 읍천리 / 카페게이트",
       content: "리아한의원 / 퓨린피부과 / E&C / 정우그룹",

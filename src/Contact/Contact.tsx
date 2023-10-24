@@ -26,4 +26,11 @@ const ContactWrap = styled.div`
     text-align: center;
     color: #fff;
   }
+
+  @media screen and (max-width: 1440px) {
+    width: 95%;
+    p.sub-tit {
+      font-size: 18rem;
+    }
+  }
 `;

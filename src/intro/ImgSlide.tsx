@@ -110,4 +110,10 @@ const Wrapper = styled.div`
       border: 1px solid #07788c;
     }
   }
+  @media screen and (max-width: 1440px) {
+    margin: 10px 0px;
+    li img {
+      width: 490px;
+    }
+  }
 `;
