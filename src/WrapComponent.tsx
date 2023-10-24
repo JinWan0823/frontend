@@ -55,4 +55,7 @@ const Wrap = styled.div`
   &::-webkit-scrollbar-track {
     background: #f8dccc;
   }
+
+  width: 100%;
+  overflow-x: hidden;
 `;

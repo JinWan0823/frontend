@@ -52,6 +52,12 @@ const TitleWrap = styled.div`
     line-height: 1.5;
     margin-top: 20px;
   }
+  @media screen and (max-width: 1440px) {
+    p {
+      font-size: 18rem;
+      margin-top: 0;
+    }
+  }
 `;
 
 const Ul = styled.ul`

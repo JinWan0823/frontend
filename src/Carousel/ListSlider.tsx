@@ -255,4 +255,36 @@ const SliderWrap = styled.div`
       margin-left: 0px;
     }
   }
+
+  @media screen and (max-width: 1440px) {
+    width: 95%;
+    .info {
+      h3 {
+        font-size: 58rem;
+      }
+      li {
+        font-size: 18rem;
+        word-break: keep-all;
+      }
+    }
+
+    .btn-wrap {
+      width: 430px;
+      a:nth-of-type(4),
+      a:nth-of-type(7) {
+        margin-left: 0px;
+      }
+      a:nth-of-type(6) {
+        margin-left: 10px;
+      }
+    }
+
+    .slick-btn {
+      width: 45px;
+      height: 45px;
+      svg {
+        font-size: 20rem;
+      }
+    }
+  }
 `;

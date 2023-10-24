@@ -23,7 +23,10 @@ export default function ContactInfo() {
           />
         </ul>
         <ContactBtn />
-        <h3 style={{ marginTop: "40px", fontSize: "60rem", lineHeight: "1.1" }}>
+        <h3
+          className="thk"
+          style={{ marginTop: "40px", fontSize: "60rem", lineHeight: "1.1" }}
+        >
           Thank you for watching <br /> my portfolio
         </h3>
       </MyInfo>
@@ -57,5 +60,22 @@ const MyInfo = styled.div`
   }
   ul {
     margin-top: 40px;
+  }
+
+  @media screen and (max-width: 1440px) {
+    width: 50%;
+    h3 {
+      font-size: 52rem;
+    }
+    ul {
+      margin-top: 10px;
+      li {
+        font-size: 18rem;
+        word-break: keep-all;
+      }
+    }
+    .thk {
+      display: none;
+    }
   }
 `;
