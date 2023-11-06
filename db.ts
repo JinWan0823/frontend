@@ -13,11 +13,11 @@ const ListData = {
       title: "TEAM NENGTUL",
       thumb: Nengtul,
       content:
-        "냉장고를 털어줘 프로젝트는 사용자들이 자신이 가지고 있는 재료를 이용해 다른 사람들이 올린 레시피의 재료들과 매칭 시켜 음식 레시피를 추천해주는 서비스입니다. 추가로 음식 재료가 남는다면 주변 사람들과 공유할 수 있는 커뮤니티를 제공합니다.",
+        "냉장고를 털어줘는 팀 프로젝트로 진행한 음식 레시피 추천 및 공유 커뮤니티 서비스입니다. 자신이 가진 재료를 이용해 맞춤 음식 레시피를 추천합니다. 디자인, 로그인, 정보관리, 재료검색, 레시피관리 등을 담당했습니다. 서버 비용 문제로 유튜브 동영상 참고 부탁드립니다.",
       date: "2023-07-08 ~ 2023-08-16",
       github: "https://github.com/nengtul/nengtul-frontend",
       notion:
-        "https://cottony-boron-ccf.notion.site/bf9e80d0c21d40e59b28ee9f5e13650a?pvs=4",
+        "https://sapphire-loaf-f04.notion.site/3f81f4b39c434eabbfa1dc28c4167988?pvs=4",
       site: "https://nengtul-frontend-iota.vercel.app/",
       skill: "React / TypeScript / Redux-persist / Styled-components",
       youtube: "https://www.youtube.com/watch?v=nAZUx73mwVU&t=71s",
