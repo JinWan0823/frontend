@@ -46,7 +46,6 @@ const TitleWrap = styled.div`
     margin-top: 60px;
   }
   p {
-    color: #fff;
     text-align: center;
     font-size: 20rem;
     line-height: 1.5;
@@ -65,7 +64,6 @@ const Ul = styled.ul`
   text-align: center;
   li {
     font-size: 30rem;
-    color: #fff;
     font-weight: 700;
     line-height: 1.2;
   }

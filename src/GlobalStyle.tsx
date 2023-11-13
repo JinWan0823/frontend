@@ -7,6 +7,12 @@ interface GlobalProps {
     theme : ThemeType
 }
 
+export default function  ThemeGlobalStyle() {
+    const theme = useRecoilValue(ThemeState);
+
+    return <GlobalStyle theme={theme as ThemeType}></GlobalStyle>
+}
+
 const GlobalStyle = createGlobalStyle<GlobalProps>`
     ${reset}
 
@@ -30,9 +36,3 @@ const GlobalStyle = createGlobalStyle<GlobalProps>`
         font-weight:700;
     }
 `
-
-export default function  ThemeGlobalStyle() {
-    const theme = useRecoilValue(ThemeState);
-
-    return <GlobalStyle theme={theme}></GlobalStyle>
-}

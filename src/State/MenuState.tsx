@@ -1,10 +1,11 @@
 import { atom } from "recoil";
+import { recoilPersist } from "recoil-persist";
 
 export type MenuType = {
   menu: string;
 };
 
-export type ThemeType = "dark" | "light";
+export type ThemeType = "light" | "dark";
 
 export const MenuState = atom<MenuType[]>({
   key: "menuState",
@@ -12,7 +13,13 @@ export const MenuState = atom<MenuType[]>({
 });
 
 
+const {persistAtom} = recoilPersist({
+  key :"localStorage",
+  storage:localStorage
+})
+
 export const ThemeState = atom<ThemeType>({
   key : "themeState",
-  default : "dark"
+  default : "light" as ThemeType,
+  effects_UNSTABLE : [persistAtom]
 })
