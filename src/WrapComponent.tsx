@@ -9,6 +9,7 @@ import { MenuState } from "./State/MenuState";
 import { useRef, useEffect } from "react";
 import Contact from "./Contact/Contact";
 import styled from "styled-components";
+import ModeBtn from "./commonComponents/ModeBtn";
 
 export default function WrapComponents() {
   const menuState = useRecoilValue(MenuState);
@@ -28,6 +29,7 @@ export default function WrapComponents() {
 
   return (
     <Wrap>
+      <ModeBtn />
       <BackCircle />
       <HeaderTabMenu />
       <div id="introSection" ref={introSectionRef}>

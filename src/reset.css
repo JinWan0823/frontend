@@ -125,10 +125,7 @@ table {
 
 body {
   background-color: #000;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+
 }
 button {
   font-family: "Noto Sans KR", sans-serif;
