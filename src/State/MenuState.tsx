@@ -5,21 +5,36 @@ export type MenuType = {
   menu: string;
 };
 
-export type ThemeType = "light" | "dark";
-
 export const MenuState = atom<MenuType[]>({
   key: "menuState",
   default: [],
 });
 
+const { persistAtom } = recoilPersist({
+  key: "localStorage",
+  storage: localStorage,
+});
 
-const {persistAtom} = recoilPersist({
-  key :"localStorage",
-  storage:localStorage
-})
+export const LightState = atom({
+  key: "light",
+  default: {
+    mode: "light",
+    bgColor: "#FFFFFF",
+    textColor: "#212426",
+  },
+});
 
-export const ThemeState = atom<ThemeType>({
-  key : "themeState",
-  default : "light" as ThemeType,
-  effects_UNSTABLE : [persistAtom]
-})
+export const DarkState = atom({
+  key: "dark",
+  default: {
+    mode: "dark",
+    bgColor: "#212426",
+    textColor: "#FEFEFE",
+  },
+});
+
+export const persistModeState = atom({
+  key: "isMode",
+  default: LightState,
+  effects_UNSTABLE: [persistAtom],
+});

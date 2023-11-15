@@ -1,27 +1,30 @@
-import { useRecoilValue } from "recoil"
-import { createGlobalStyle } from "styled-components"
-import reset from "styled-reset"
-import { ThemeState, ThemeType } from "./State/MenuState"
+import { useRecoilValue } from "recoil";
+import { createGlobalStyle } from "styled-components";
+import reset from "styled-reset";
+import { persistModeState } from "./State/MenuState";
 
-interface GlobalProps {
-    theme : ThemeType
+interface GlobalStyleProps {
+  bgColor: string;
+  textColor: string;
 }
 
-export default function  ThemeGlobalStyle() {
-    const theme = useRecoilValue(ThemeState);
-
-    return <GlobalStyle theme={theme as ThemeType}></GlobalStyle>
+export default function ThemeGlobalStyle() {
+  const theme = useRecoilValue(persistModeState);
+  const bgColor = theme.bgColor;
+  const textColor = theme.textColor;
+  return <GlobalStyle bgColor={bgColor} textColor={textColor}></GlobalStyle>;
 }
 
-const GlobalStyle = createGlobalStyle<GlobalProps>`
+const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
     ${reset}
 
     html {
         font-size:6.25%;
     }
     body {
-        background-color: ${(props) => (props.theme === "dark" ? "#FFFFFF" : "#212426")};
-        color: ${(props) => (props.theme === "dark" ? "#212426" : "#FEFEFE")};
+        padding-left:100px;
+        color : ${(props) => props.textColor};
+        background-color : ${(props) => props.bgColor};
         -webkit-user-select: none;
         -moz-user-select: none;
         -ms-user-select: none;
@@ -35,4 +38,4 @@ const GlobalStyle = createGlobalStyle<GlobalProps>`
         font-family: "Oswald", sans-serif;
         font-weight:700;
     }
-`
+`;
