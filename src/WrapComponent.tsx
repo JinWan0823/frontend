@@ -7,6 +7,7 @@ import { MenuState } from "./State/MenuState";
 import { useRef, useEffect } from "react";
 import Contact from "./Contact/Contact";
 import styled from "styled-components";
+import Header from "./commonComponents/Header";
 
 export default function WrapComponents() {
   const menuState = useRecoilValue(MenuState);
@@ -26,11 +27,16 @@ export default function WrapComponents() {
 
   return (
     <Wrap>
-      <div id="introSection" ref={introSectionRef}>
+      <Header />
+      <div
+        id="introSection"
+        ref={introSectionRef}
+        style={{ paddingTop: "40px" }}
+      >
         <Intro />
       </div>
-      <Contents />
       <div id="sliderSection" ref={sliderSectionRef}>
+        <Contents />
         <ListSlider />
       </div>
       <div id="contactSection" ref={contactSectionRef}>

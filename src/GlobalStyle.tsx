@@ -3,9 +3,9 @@ import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
 import { persistModeState } from "./State/MenuState";
 
-interface GlobalStyleProps {
-  bgColor: string;
-  textColor: string;
+export interface GlobalStyleProps {
+  bgColor?: string;
+  textColor?: string;
 }
 
 export default function ThemeGlobalStyle() {
