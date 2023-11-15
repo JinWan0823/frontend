@@ -18,7 +18,6 @@ const List = styled.li`
   display: flex;
   align-items: flex-start;
   font-size: 20rem;
-  color: #fff;
   margin-top: 12px;
   word-break: keep-all;
   line-height: 1.5;

@@ -24,7 +24,6 @@ const ContactWrap = styled.div`
   p.sub-tit {
     font-size: 20rem;
     text-align: center;
-    color: #fff;
   }
 
   @media screen and (max-width: 1440px) {

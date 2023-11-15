@@ -129,7 +129,6 @@ const MenuOverlay = styled.div`
       
       h2 {
         position: relative;
-        color: #fff;
         text-decoration: none;
         font-size:110rem;
         cursor:pointer;
