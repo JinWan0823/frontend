@@ -48,14 +48,15 @@ export default function FullMenu({ toggleMenu, TabOn }: Props) {
 
 const MenuOverlay = styled.div`
   position: fixed;
-  width: 100%;
+  width: calc(100% - 100px);
   height: 100%;
   top: 0;
-  left: 0;
+  left: 100px;
   opacity: 1;
   visibility: hidden;
   transition: opacity 0.5s, visibility 0.5s, width 0.5s;
   z-index: 99;
+  overflow:hidden;
 
   &::before {
     content: "";

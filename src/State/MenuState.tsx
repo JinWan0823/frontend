@@ -35,6 +35,6 @@ export const DarkState = atom({
 
 export const persistModeState = atom({
   key: "isMode",
-  default: LightState,
+  default: DarkState,
   effects_UNSTABLE: [persistAtom],
 });

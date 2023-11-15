@@ -1,6 +1,4 @@
 import ListSlider from "./Carousel/ListSlider";
-import BackCircle from "./commonComponents/BackCircle";
-import HeaderTabMenu from "./commonComponents/HeaderTabMenu";
 import Contents from "./contents/Contents";
 import Intro from "./intro/Intro";
 
@@ -9,7 +7,6 @@ import { MenuState } from "./State/MenuState";
 import { useRef, useEffect } from "react";
 import Contact from "./Contact/Contact";
 import styled from "styled-components";
-import ModeBtn from "./commonComponents/ModeBtn";
 
 export default function WrapComponents() {
   const menuState = useRecoilValue(MenuState);
@@ -29,9 +26,6 @@ export default function WrapComponents() {
 
   return (
     <Wrap>
-      <ModeBtn />
-      <BackCircle />
-      <HeaderTabMenu />
       <div id="introSection" ref={introSectionRef}>
         <Intro />
       </div>
