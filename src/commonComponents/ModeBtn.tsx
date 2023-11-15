@@ -14,7 +14,6 @@ export default function ModeBtn() {
   const darkMode = useRecoilValue(DarkState);
 
   const toggleTheme = () => {
-    console.log(currentMode);
     if (Theme === lightMode) {
       setTheme(darkMode);
       setBtn("dark");
