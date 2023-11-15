@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import { useRecoilState, useRecoilValue } from "recoil";
-import { DarkState, LightState, modeState } from "../State/MenuState";
+import { DarkState, LightState, persistModeState } from "../State/MenuState";
 
 export default function ModeBtn() {
-  const [Theme, setTheme] = useRecoilState(modeState);
+  const [Theme, setTheme] = useRecoilState(persistModeState);
 
   const lightMode = useRecoilValue(LightState);
   const darkMode = useRecoilValue(DarkState);
