@@ -1,7 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import { useState } from "react";
 import FullMenu from "./FullMenu";
-import UpBtn from "./UpBtn";
 
 export default function HeaderTabMenu() {
   const [TabMenu, setTebMenu] = useState(false);
@@ -11,7 +10,6 @@ export default function HeaderTabMenu() {
 
   return (
     <>
-      <UpBtn />
       <HeaderTab onClick={TabOn} className={"burger-wrap"}>
         <div className={"burger".concat(TabMenu ? " on" : "")}></div>
       </HeaderTab>
@@ -26,8 +24,6 @@ const TabAnimate = keyframes`
   }
   100% {
     top:0px;
-    width:30px;
-    height:2px;
     transform: translateX(-50%) rotate(45deg);
   }
 `;
@@ -37,54 +33,48 @@ const TabAnimate2 = keyframes`
   }
   100% {
     top:0px;
-    width:30px;
-    height:2px;
     transform: translateX(-50%) rotate(-45deg);
   }
 `;
 
 const HeaderTab = styled.div`
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  width: 60px;
-  height: 60px;
-  z-index: 9999999999;
-  cursor: pointer;
+  width: 54px;
+  height: 54px;
+  z-index: 9999999999999999999999999;
+  background-color: #fff;
   border-radius: 15px;
-  background-color: #000;
-  box-shadow: 0px 0px 3px 2px #868686;
+  box-shadow: 0px 0px 3px #333;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
 
   .burger {
-    width: 6px;
-    height: 6px;
-    background-color: #fff;
-    border-radius: 50%;
+    width: 32px;
+    height: 4px;
+    background-color: #b15e30;
     position: relative;
+    border-radius: 8px;
     &.on {
       width: 0;
-      height: 0;
     }
     &::after,
     &::before {
       content: "";
-      width: 6px;
-      height: 6px;
-      background-color: #fff;
-      border-radius: 50%;
+      width: 32px;
+      height: 4px;
+      border-radius: 8px;
+      background-color: #b15e30;
       position: absolute;
       transition: 0.5s ease all;
       transform: translateX(-50%);
       left: 50%;
     }
     &::after {
-      top: -14px;
+      top: -10px;
     }
     &::before {
-      top: 14px;
+      top: 10px;
     }
 
     &.on::after {

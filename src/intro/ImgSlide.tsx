@@ -65,7 +65,6 @@ const infiniteAnimation2 = keyframes`
   }
 `;
 const Wrapper = styled.div`
-  margin: 40px 0px;
   .slide-container {
     overflow: hidden;
   }

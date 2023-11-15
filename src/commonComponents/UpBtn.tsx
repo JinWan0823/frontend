@@ -18,9 +18,6 @@ export default function UpBtn() {
 }
 
 const Btn = styled.button`
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
   width: 60px;
   height: 60px;
   z-index: 9;
