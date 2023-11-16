@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import List from "./list";
 import Banner from "../assets/banner.png";
 import { GlobalStyleProps } from "../GlobalStyle";
 import Pdf from "../assets/jinwan.pdf";
@@ -41,7 +40,6 @@ export default function Contents() {
             </div>
           </div>
         </div>
-        <List />
       </ContentsWrap>
     </>
   );
@@ -79,10 +77,12 @@ const ContentsWrap = styled.div<GlobalStyleProps>`
     display: flex;
     h2 {
       font-size: 30rem;
+      width: 140px;
+      flex-shrink: 0;
     }
 
     .text {
-      padding: 10rem 0 0 60rem;
+      padding-top: 10rem;
       p {
         font-size: 18rem;
         line-height: 1.6;
