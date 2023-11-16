@@ -8,6 +8,8 @@ import { useRef, useEffect } from "react";
 import Contact from "./Contact/Contact";
 import styled from "styled-components";
 import Header from "./commonComponents/Header";
+import SkillWrap from "./SkillProgress/SkillWrap";
+import List from "./contents/list";
 
 export default function WrapComponents() {
   const menuState = useRecoilValue(MenuState);
@@ -34,9 +36,13 @@ export default function WrapComponents() {
         style={{ paddingTop: "100px" }}
       >
         <Intro />
+        <Contents />
+      </div>
+      <div id="SkillSection">
+        <SkillWrap />
       </div>
       <div id="sliderSection" ref={sliderSectionRef}>
-        <Contents />
+        <List />
         <ListSlider />
       </div>
       <div id="contactSection" ref={contactSectionRef}>
