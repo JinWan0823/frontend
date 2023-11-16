@@ -18,9 +18,12 @@ export default function UpBtn() {
 }
 
 const Btn = styled.button`
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
   width: 60px;
   height: 60px;
-  z-index: 9;
+  z-index: 9999999;
   cursor: pointer;
   border-radius: 15px;
   background-color: #fff;

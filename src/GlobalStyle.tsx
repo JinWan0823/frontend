@@ -21,6 +21,9 @@ const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
     html {
         font-size:6.25%;
     }
+    a{
+      color:inherit;
+    }
     body {
         padding-left:100px;
         color : ${(props) => props.textColor};

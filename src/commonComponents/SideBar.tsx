@@ -1,9 +1,26 @@
 import styled from "styled-components";
 import ModeBtn from "./ModeBtn";
 import HeaderTabMenu from "./HeaderTabMenu";
-// import UpBtn from "./UpBtn";
+import { useEffect, useState } from "react";
+import UpBtn from "./UpBtn";
 
 export default function Sidebar() {
+  const [upBtn, setUpBtn] = useState(false);
+  const handleScroll = () => {
+    if (window.scrollY >= 50) {
+      setUpBtn(true);
+    } else {
+      setUpBtn(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <SideMenu>
       <div className="side_wrap" style={{ paddingTop: "10px" }}>
@@ -12,7 +29,7 @@ export default function Sidebar() {
       </div>
       <div style={{ paddingBottom: "20px" }}>
         <ModeBtn />
-        {/* <UpBtn /> */}
+        {upBtn && <UpBtn />}
       </div>
     </SideMenu>
   );
