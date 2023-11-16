@@ -31,7 +31,7 @@ export default function WrapComponents() {
       <div
         id="introSection"
         ref={introSectionRef}
-        style={{ paddingTop: "40px" }}
+        style={{ paddingTop: "100px" }}
       >
         <Intro />
       </div>

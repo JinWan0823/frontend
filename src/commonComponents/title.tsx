@@ -12,7 +12,7 @@ export default function Title({ children }: TitleProps) {
 
 const Text = styled.h1`
   font-size: 142rem;
-  padding: 30rem 20rem;
+  padding: 30rem 40rem;
   color: ${(props) => props.color};
 
   @media screen and (max-width: 1440px) {
