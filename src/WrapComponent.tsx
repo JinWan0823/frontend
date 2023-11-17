@@ -1,4 +1,3 @@
-import ListSlider from "./Carousel/ListSlider";
 import Contents from "./Contents/Contents";
 import Intro from "./Intro/Intro";
 
@@ -9,7 +8,6 @@ import Contact from "./Contact/Contact";
 import styled from "styled-components";
 import Header from "./Header/Header";
 import SkillWrap from "./SkillProgress/SkillWrap";
-import List from "./Contents/list";
 import ProjectWrap from "./Project/ProjectWrap";
 
 export default function WrapComponents() {
