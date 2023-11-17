@@ -1,11 +1,11 @@
 export const darkMode = {
-    bgColor : '#000',
+    bgcolor : '#000',
     textColor : "#fff",
     borderColor : "#fff"
 }
 
 export const lightMode = {
-    bgColor: '#fff',
+    bgcolor: '#fff',
     textColor : "#333",
     borderColor : "#333",
 }

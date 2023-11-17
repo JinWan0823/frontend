@@ -4,15 +4,15 @@ import reset from "styled-reset";
 import { persistModeState } from "./State/MenuState";
 
 export interface GlobalStyleProps {
-  bgColor?: string;
+  bgcolor?: string;
   textColor?: string;
 }
 
 export default function ThemeGlobalStyle() {
   const theme = useRecoilValue(persistModeState);
-  const bgColor = theme.bgColor;
+  const bgcolor = theme.bgcolor;
   const textColor = theme.textColor;
-  return <GlobalStyle bgColor={bgColor} textColor={textColor}></GlobalStyle>;
+  return <GlobalStyle bgcolor={bgcolor} textColor={textColor}></GlobalStyle>;
 }
 
 const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
@@ -27,7 +27,7 @@ const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
     body {
         padding-left:100px;
         color : ${(props) => props.textColor};
-        background-color : ${(props) => props.bgColor};
+        background-color : ${(props) => props.bgcolor};
         -webkit-user-select: none;
         -moz-user-select: none;
         -ms-user-select: none;
