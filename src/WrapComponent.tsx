@@ -1,6 +1,5 @@
 import Contents from "./Contents/Contents";
 import Intro from "./Intro/Intro";
-
 import { useRecoilValue } from "recoil";
 import { MenuState } from "./State/MenuState";
 import { useRef, useEffect } from "react";
