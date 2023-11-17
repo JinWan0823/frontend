@@ -14,12 +14,15 @@ import List from "./contents/list";
 export default function WrapComponents() {
   const menuState = useRecoilValue(MenuState);
   const introSectionRef = useRef<HTMLDivElement | null>(null);
+  const skillSectionRef = useRef<HTMLDivElement | null>(null);
   const sliderSectionRef = useRef<HTMLDivElement | null>(null);
   const contactSectionRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     if (menuState[0]?.menu === "ABOUT" && introSectionRef.current) {
       introSectionRef.current.scrollIntoView({ behavior: "smooth" });
+    } else if (menuState[0]?.menu === "SKILL" && skillSectionRef.current) {
+      skillSectionRef.current.scrollIntoView({ behavior: "smooth" });
     } else if (menuState[0]?.menu === "PROJECT" && sliderSectionRef.current) {
       sliderSectionRef.current.scrollIntoView({ behavior: "smooth" });
     } else if (menuState[0]?.menu === "CONTACT" && contactSectionRef.current) {
@@ -36,16 +39,16 @@ export default function WrapComponents() {
         style={{ paddingTop: "100px" }}
       >
         <Intro />
-        <Contents />
       </div>
-      <div id="SkillSection">
+      <div id="SkillSection" ref={skillSectionRef}>
+        <Contents />
         <SkillWrap />
       </div>
       <div id="sliderSection" ref={sliderSectionRef}>
         <List />
         <ListSlider />
       </div>
-      <div id="contactSection" ref={contactSectionRef}>
+      <div id="contactSection" ref={contactSectionRef} style={{paddingTop:"100px"}}>
         <Contact />
       </div>
     </Wrap>

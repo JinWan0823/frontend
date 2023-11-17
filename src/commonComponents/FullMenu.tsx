@@ -9,6 +9,7 @@ interface Props {
 
 const menuItems: MenuType[] = [
   { menu: "ABOUT" },
+  { menu: "SKILL" },
   { menu: "PROJECT" },
   { menu: "CONTACT" },
 ];
@@ -102,7 +103,6 @@ const MenuOverlay = styled.div`
   }
   nav {
     position: relative;
-    height: 60%;
     top: 50%;
     transform: translateY(-50%);
     font-size: 50px;

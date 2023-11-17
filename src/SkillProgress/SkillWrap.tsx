@@ -20,7 +20,8 @@ export default function SkillWrap() {
 }
 
 const SkillWrapper = styled.div`
-  padding: 60rem 40rem;
+  padding: 110rem 40rem;
+  border-bottom:1px solid #ddd;
   .skill_wrap {
     display: flex;
     h2 {
