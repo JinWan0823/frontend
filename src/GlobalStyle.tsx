@@ -18,6 +18,10 @@ export default function ThemeGlobalStyle() {
 const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
     ${reset}
 
+  *{
+    box-sizing:border-box;
+  }
+
     html {
         font-size:6.25%;
     }

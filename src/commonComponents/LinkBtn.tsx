@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { GlobalStyleProps } from "../GlobalStyle";
-import Tootip from "./Tooltip";
+import Tootip from "../Header/Tooltip";
 
 export default function LinkBtn({ textColor }: GlobalStyleProps) {
   return (
