@@ -16,7 +16,7 @@ export default function Header() {
   const [activeSection, setActiveSection] = useState("");
   const [scrollOn, setScrollOn] = useState(false);
   const currentMode = useRecoilValue(persistModeState);
-  const bgColor = currentMode.bgColor;
+  const bgcolor = currentMode.bgcolor;
   const textColor = currentMode.textColor;
 
   const handleMenuItemClick = (selectedMenu: string) => {
@@ -78,7 +78,7 @@ export default function Header() {
       className={`${currentMode.mode === "dark" ? "darkmode" : "lightmode"} ${
         scrollOn ? "on" : ""
       }`}
-      bgColor={bgColor}
+      bgcolor={bgcolor}
     >
       <ul className="navi">
         {menuItems.map((item) => (
@@ -108,7 +108,7 @@ const ScrollHeader = styled.header<GlobalStyleProps>`
   &.on {
     transition: 0.5s ease all;
     background-color: #212426;
-    background-color: ${(props) => props.bgColor};
+    background-color: ${(props) => props.bgcolor};
   }
   ul.navi {
     display: flex;

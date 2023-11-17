@@ -19,7 +19,7 @@ export const LightState = atom({
   key: "light",
   default: {
     mode: "light",
-    bgColor: "#FFFFFF",
+    bgcolor: "#FFFFFF",
     textColor: "#212426",
   },
 });
@@ -28,7 +28,7 @@ export const DarkState = atom({
   key: "dark",
   default: {
     mode: "dark",
-    bgColor: "#212426",
+    bgcolor: "#212426",
     textColor: "#FEFEFE",
   },
 });

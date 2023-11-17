@@ -24,30 +24,30 @@ const LinkBtn = styled.a<LinkBtnProps>`
 export default function ButtonComponent({ btn, cate }: BtnProps) {
   let text = "";
   let color = "";
-  let bgColor = "";
+  let bgcolor = "";
   if (cate === "Github") {
     text = cate;
     color = "#fff";
-    bgColor = "#764abc";
+    bgcolor = "#764abc";
   } else if (cate.includes("Github")) {
     text = cate;
     color = "#fff";
-    bgColor = "#764abc";
+    bgcolor = "#764abc";
   } else if (cate === "site") {
     text = "Site";
     color = "#333";
-    bgColor = "#fff";
+    bgcolor = "#fff";
   } else if (cate === "youtube") {
     text = "Youtube";
     color = "#fff";
-    bgColor = "#e34f26";
+    bgcolor = "#e34f26";
   } else {
     text = cate;
     color = "#333";
-    bgColor = "#fff";
+    bgcolor = "#fff";
   }
   return (
-    <LinkBtn href={btn} target="_blank" color={color} $bg={bgColor}>
+    <LinkBtn href={btn} target="_blank" color={color} $bg={bgcolor}>
       {text}
     </LinkBtn>
   );

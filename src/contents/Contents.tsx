@@ -58,7 +58,7 @@ const ContentsWrap = styled.div<GlobalStyleProps>`
 
   .img-wrap {
     position: relative;
-    background-color: ${(props) => props.bgColor};
+    background-color: ${(props) => props.bgcolor};
     box-shadow: 0px 0px 3px #333 inset;
     img {
       width: 100%;
@@ -100,8 +100,8 @@ const ContentsWrap = styled.div<GlobalStyleProps>`
         border-radius: 6px;
       }
       a:hover {
-        color: ${(props) => props.bgColor};
-        border-color: ${(props) => props.bgColor};
+        color: ${(props) => props.bgcolor};
+        border-color: ${(props) => props.bgcolor};
       }
     }
   }
