@@ -41,7 +41,7 @@ Let me show you my stack of skills 💡
 }
 
 const IntroTitle = styled.h1`
-  height: 200px;
+  height: 245px;
   font-size: 45rem;
   line-height: 1.3;
   padding: 30rem 40rem;

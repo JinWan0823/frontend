@@ -3,7 +3,7 @@
   import { useRecoilValue, useSetRecoilState } from "recoil";
   import { useEffect, useState } from "react";
   import { GlobalStyleProps } from "../GlobalStyle";
-  import LinkBtn from "./LinkBtn";
+  import LinkBtn from "../commonComponents/LinkBtn";
 
   const menuItems: MenuType[] = [
     { menu: "ABOUT" },

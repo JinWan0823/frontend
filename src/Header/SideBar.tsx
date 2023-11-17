@@ -2,7 +2,7 @@ import styled from "styled-components";
 import ModeBtn from "./ModeBtn";
 import HeaderTabMenu from "./HeaderTabMenu";
 import { useEffect, useState } from "react";
-import UpBtn from "./UpBtn";
+import UpBtn from "../commonComponents/UpBtn";
 
 export default function Sidebar() {
   const [upBtn, setUpBtn] = useState(false);

@@ -1,15 +1,16 @@
 import ListSlider from "./Carousel/ListSlider";
-import Contents from "./contents/Contents";
-import Intro from "./intro/Intro";
+import Contents from "./Contents/Contents";
+import Intro from "./Intro/Intro";
 
 import { useRecoilValue } from "recoil";
 import { MenuState } from "./State/MenuState";
 import { useRef, useEffect } from "react";
 import Contact from "./Contact/Contact";
 import styled from "styled-components";
-import Header from "./commonComponents/Header";
+import Header from "./Header/Header";
 import SkillWrap from "./SkillProgress/SkillWrap";
-import List from "./contents/list";
+import List from "./Contents/list";
+import ProjectWrap from "./Project/ProjectWrap";
 
 export default function WrapComponents() {
   const menuState = useRecoilValue(MenuState);
@@ -45,8 +46,7 @@ export default function WrapComponents() {
         <SkillWrap />
       </div>
       <div id="sliderSection" ref={sliderSectionRef}>
-        <List />
-        <ListSlider />
+        <ProjectWrap />
       </div>
       <div id="contactSection" ref={contactSectionRef} style={{paddingTop:"100px"}}>
         <Contact />
