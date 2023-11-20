@@ -1,14 +1,17 @@
-import ThemeGlobalStyle from "./GlobalStyle";
-import WrapComponents from "./WrapComponent";
 import { RecoilRoot } from "recoil";
-import Sidebar from "./Header/SideBar";
+import MainPage from "./Page/MainPage";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import DetailPage from "./Page/DetailPage";
 
 function App() {
   return (
     <RecoilRoot>
-      <ThemeGlobalStyle />
-      <Sidebar />
-      <WrapComponents />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path={`/project/:Id`} element={<DetailPage />} />
+        </Routes>
+      </BrowserRouter>
     </RecoilRoot>
   );
 }
