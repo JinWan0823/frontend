@@ -3,9 +3,13 @@ import ModeBtn from "./ModeBtn";
 import HeaderTabMenu from "./HeaderTabMenu";
 import { useEffect, useState } from "react";
 import UpBtn from "../commonComponents/UpBtn";
+import { useParams } from "react-router-dom";
+import HomeBtn from "./HomeBtn";
 
 export default function Sidebar() {
   const [upBtn, setUpBtn] = useState(false);
+  const { Id } = useParams();
+
   const handleScroll = () => {
     if (window.scrollY >= 50) {
       setUpBtn(true);
@@ -24,7 +28,7 @@ export default function Sidebar() {
   return (
     <SideMenu>
       <div className="side_wrap" style={{ paddingTop: "10px" }}>
-        <HeaderTabMenu />
+        {!Id ? <HeaderTabMenu /> : <HomeBtn />}
         <p className="thk">Thanks for watching my portfolio :)</p>
       </div>
       <div style={{ paddingBottom: "20px" }}>

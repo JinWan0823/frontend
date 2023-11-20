@@ -1,33 +1,37 @@
 import styled from "styled-components";
 import { CardProps } from "./ProjectWrap";
 import { GlobalStyleProps } from "../GlobalStyle";
+import { Link } from "react-router-dom";
 
 interface ProjectCardProps {
   item: CardProps;
 }
 
 export default function ProjectCard({ item }: ProjectCardProps) {
+  const indexId = item.id - 1;
   return (
     <Card>
-      <div
-        className="img_box"
-        style={{ backgroundImage: `url(${item.thumb})` }}
-      >
-        <div className="border_box">
-          <div className="border"></div>
+      <Link to={`project/${indexId}`}>
+        <div
+          className="img_box"
+          style={{ backgroundImage: `url(${item.thumb})` }}
+        >
+          <div className="border_box">
+            <div className="border"></div>
+          </div>
+          <div className="info_box">
+            <h3>
+              <span>{item.title}</span>
+            </h3>
+            <p>
+              <span>{item.date}</span>
+            </p>
+            <p>
+              <span>{item.skill}</span>
+            </p>
+          </div>
         </div>
-        <div className="info_box">
-          <h3>
-            <span>{item.title}</span>
-          </h3>
-          <p>
-            <span>{item.date}</span>
-          </p>
-          <p>
-            <span>{item.skill}</span>
-          </p>
-        </div>
-      </div>
+      </Link>
     </Card>
   );
 }
@@ -51,6 +55,7 @@ const Card = styled.li<GlobalStyleProps>`
   }
   p {
     font-size: 18rem;
+    padding-bottom: 4px;
     margin-top: 10px;
     overflow: hidden;
     position: relative;
