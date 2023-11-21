@@ -4,24 +4,80 @@ import { useRecoilValue } from "recoil";
 import { persistModeState } from "../State/MenuState";
 import InputComponent from "./InputComponent";
 
+import { collection, addDoc } from "@firebase/firestore";
+import { useState } from "react";
+import { db } from "../firebase";
+
 export default function ContactForm() {
   const currentMode = useRecoilValue(persistModeState);
-  const textColor = currentMode.textColor;
+  const color = currentMode.textColor;
   const mode = currentMode.mode;
 
+  const [company, setCompany] = useState("");
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const submitData = async (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
+    e.preventDefault();
+    try {
+      await addDoc(collection(db, "Contact"), {
+        name: name,
+        company: company,
+        phone: phone,
+        email: email,
+        message: message,
+      });
+      setCompany("");
+      setName("");
+      setPhone("");
+      setEmail("");
+      setMessage("");
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
-    <Form textColor={textColor} mode={mode}>
+    <Form color={color} mode={mode}>
       <ul>
-        <InputComponent type={"text"} required={true} title={"기업명"} />
-        <InputComponent type={"text"} required={true} title={"성함"} />
-        <InputComponent type={"text"} required={true} title={"전화번호"} />
-        <InputComponent type={"email"} required={false} title={"이메일"} />
+        <InputComponent
+          type={"text"}
+          required={true}
+          title={"기업명"}
+          setState={setCompany}
+        />
+        <InputComponent
+          type={"text"}
+          required={true}
+          title={"성함"}
+          setState={setName}
+        />
+        <InputComponent
+          type={"number"}
+          required={true}
+          title={"전화번호"}
+          setState={setPhone}
+        />
+        <InputComponent
+          type={"email"}
+          required={false}
+          title={"이메일"}
+          setState={setEmail}
+        />
         <li>
           <p className="required">메세지</p>
-          <textarea rows={5} />
+          <textarea
+            required
+            rows={5}
+            onChange={(e) => setMessage(e.target.value)}
+          />
         </li>
         <li>
-          <button type="submit">보내기</button>
+          <button onClick={(e) => submitData(e)}>보내기</button>
         </li>
       </ul>
     </Form>
@@ -54,7 +110,7 @@ const Form = styled.form<GlobalStyleProps>`
       background-color: transparent;
       border: 1px solid
         ${(props) => (props.mode === "dark" ? "#676767" : "#b0b0b0")};
-      color: ${(props) => props.textColor};
+      color: ${(props) => props.color};
       font-size: 18rem;
     }
     textarea {
@@ -63,7 +119,7 @@ const Form = styled.form<GlobalStyleProps>`
       background-color: transparent;
       border: 1px solid
         ${(props) => (props.mode === "dark" ? "#676767" : "#b0b0b0")};
-      color: ${(props) => props.textColor};
+      color: ${(props) => props.color};
       font-size: 18rem;
     }
 
