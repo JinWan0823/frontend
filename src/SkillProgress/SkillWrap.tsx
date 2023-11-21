@@ -7,12 +7,12 @@ export default function SkillWrap() {
       <div className="skill_wrap">
         <h2>Skills</h2>
         <ul className="progress_wrap">
-          <ProgressBar title={"react.js"} percent={80} color={"#fcb9aa"} />
-          <ProgressBar title={"Typescript"} percent={70} color={"#ffdbcc"} />
-          <ProgressBar title={"Javascript"} percent={80} color={"#eceae4"} />
-          <ProgressBar title={"JQuery"} percent={90} color={"#a2e1db"} />
-          <ProgressBar title={"Html"} percent={90} color={"#55cbcd"} />
-          <ProgressBar title={"CSS"} percent={85} color={"#fcb9aa"} />
+          <ProgressBar title={"react.js"} percent={80} color={"#83A2FF"} />
+          <ProgressBar title={"Typescript"} percent={70} color={"#B4BDFF"} />
+          <ProgressBar title={"Javascript"} percent={80} color={"#eabe7e"} />
+          <ProgressBar title={"JQuery"} percent={90} color={"#FFD28F"} />
+          <ProgressBar title={"Html"} percent={90} color={"#27e5e8"} />
+          <ProgressBar title={"CSS"} percent={85} color={"#e78f7b"} />
         </ul>
       </div>
     </SkillWrapper>
@@ -21,7 +21,7 @@ export default function SkillWrap() {
 
 const SkillWrapper = styled.div`
   padding: 110rem 40rem;
-  border-bottom:1px solid #ddd;
+  border-bottom: 1px solid #ddd;
   .skill_wrap {
     display: flex;
     h2 {

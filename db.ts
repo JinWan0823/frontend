@@ -39,7 +39,8 @@ const ListData = {
       mobile: false,
       work: [
         "디자인 작업 (100%)",
-        "로그인/유저 정보 관리, 레시피 관리 등 채팅,카카오맵 제외 100%",
+        "퍼블리싱 (100%)",
+        "국문관광정보 Api, firebase crud 게시판 , 유저 정보 관리 개발 (100%)",
       ],
       category: "Front-end",
       content:
@@ -60,7 +61,8 @@ const ListData = {
       mobile: true,
       work: [
         "디자인 작업 (100%)",
-        "로그인/유저 정보 관리, 레시피 관리 등 채팅,카카오맵 제외 100%",
+        "퍼블리싱 (100%)",
+        "php 게시판 커스텀 개발 (100%)",
       ],
       skill: "JavaScript / Jquery / PHP ",
       content:
@@ -73,15 +75,12 @@ const ListData = {
       title: "Group Chat",
       category: "Back-end",
       mobile: false,
-      work: [
-        "디자인 작업 (100%)",
-        "로그인/유저 정보 관리, 레시피 관리 등 채팅,카카오맵 제외 100%",
-      ],
+      work: ["디자인 작업 (진행중)", "socket.io 개발 (진행중)"],
       skill: "Socket.IO / MongoDB / React",
       thumb: Chat,
       date: "2023.11 - 진행중",
       content:
-        "웹소켓을 이용한 유저간 실시간 그룹채팅을 목적으로 개발중인 프로젝트입니다.",
+        "웹소켓을 이용한 유저간 실시간 그룹채팅을 목적으로 개발중인 프로젝트입니다. 빠른 시일내에 완성하여 업로드하겠습니다.",
       site: "",
     },
     {
@@ -91,7 +90,8 @@ const ListData = {
       mobile: true,
       work: [
         "디자인 작업 (100%)",
-        "로그인/유저 정보 관리, 레시피 관리 등 채팅,카카오맵 제외 100%",
+        "퍼블리싱 (100%)",
+        "매장 등록, 카카오맵 Pin 개발 (100%)",
       ],
       skill: "JavaScript / Jquery / PHP / MySql",
       thumb: Menu,
@@ -105,10 +105,7 @@ const ListData = {
       title: "OLIVE RENTCAR",
       thumb: OliveRent,
       mobile: true,
-      work: [
-        "디자인 작업 (100%)",
-        "로그인/유저 정보 관리, 레시피 관리 등 채팅,카카오맵 제외 100%",
-      ],
+      work: ["디자인 작업 (100%)", "퍼블리싱 (100%)", "php 커스텀 개발 (100%)"],
       category: "Front-end",
       skill: "JavaScript / Jquery / PHP / MySql",
       content:
@@ -121,10 +118,7 @@ const ListData = {
       title: "SUPER MODEL ARUM",
       category: "Front-end",
       mobile: true,
-      work: [
-        "디자인 작업 (100%)",
-        "로그인/유저 정보 관리, 레시피 관리 등 채팅,카카오맵 제외 100%",
-      ],
+      work: ["디자인 작업 (100%)", "퍼블리싱 (100%)", "php 커스텀 개발 (100%)"],
       skill: "JavaScript / Jquery / PHP",
       thumb: Arum,
       date: "2022.06 - 2022.07",
@@ -137,10 +131,7 @@ const ListData = {
       title: "CAFE 382",
       category: "Front-end",
       mobile: true,
-      work: [
-        "디자인 작업 (100%)",
-        "로그인/유저 정보 관리, 레시피 관리 등 채팅,카카오맵 제외 100%",
-      ],
+      work: ["디자인 작업 (100%)", "퍼블리싱 (100%)"],
       skill: "JavaScript / Jquery / PHP ",
       thumb: Cafe382,
       date: "2022.05",
@@ -153,10 +144,7 @@ const ListData = {
       title: "E&C COMPANY",
       category: "Front-end",
       mobile: true,
-      work: [
-        "디자인 작업 (100%)",
-        "로그인/유저 정보 관리, 레시피 관리 등 채팅,카카오맵 제외 100%",
-      ],
+      work: ["디자인 작업 (100%)", "퍼블리싱 (100%)"],
       skill: "JavaScript / Jquery / PHP",
       thumb: Company,
       date: "2022.06",
@@ -168,10 +156,7 @@ const ListData = {
       title: "PUREEN SKIN CLINIC",
       category: "Front-end",
       mobile: true,
-      work: [
-        "디자인 작업 (100%)",
-        "로그인/유저 정보 관리, 레시피 관리 등 채팅,카카오맵 제외 100%",
-      ],
+      work: ["디자인 작업 (100%)", "퍼블리싱 (100%)"],
       skill: "JavaScript / Jquery / PHP ",
       thumb: Pureen,
       date: "2022.04",
@@ -184,10 +169,7 @@ const ListData = {
       title: "JUNGWOO GROUP",
       category: "Front-end",
       mobile: true,
-      work: [
-        "디자인 작업 (100%)",
-        "로그인/유저 정보 관리, 레시피 관리 등 채팅,카카오맵 제외 100%",
-      ],
+      work: ["디자인 작업 (100%)", "퍼블리싱 (100%)"],
       skill: "JavaScript / Jquery / PHP",
       thumb: Jungwoo,
       date: "2022.04",

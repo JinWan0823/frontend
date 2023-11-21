@@ -33,7 +33,7 @@ export default function Sidebar() {
       </div>
       <div style={{ paddingBottom: "20px" }}>
         <ModeBtn />
-        {upBtn && <UpBtn />}
+        {upBtn && !Id && <UpBtn />}
       </div>
     </SideMenu>
   );
