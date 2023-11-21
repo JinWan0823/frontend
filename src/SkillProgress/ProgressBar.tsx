@@ -13,8 +13,6 @@ export default function ProgressBar({ title, percent, color }: ProgressProps) {
   const currentMode = useRecoilValue(persistModeState);
   const [animate, setAnimate] = useState(false);
 
-  console.log(currentMode);
-
   useEffect(() => {
     const handleScroll = () => {
       const element = document.getElementById("barWrap");
