@@ -60,7 +60,6 @@ const Project = styled.div`
   h1 {
     font-size: 35rem;
     text-align: center;
-    color: #b15e30;
   }
 `;
 

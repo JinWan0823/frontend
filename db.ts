@@ -72,7 +72,7 @@ const ListData = {
     },
     {
       id: 4,
-      title: "Group Chat",
+      title: "GROUP CHAT",
       category: "Back-end",
       mobile: false,
       work: ["디자인 작업 (진행중)", "socket.io 개발 (진행중)"],
