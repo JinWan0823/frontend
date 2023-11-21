@@ -1,13 +1,13 @@
 import { useRecoilValue } from "recoil";
 import { MenuState } from "./State/MenuState";
 import { useRef, useEffect } from "react";
-import Contact from "./Contact/Contact";
 import styled from "styled-components";
 import Header from "./Header/Header";
 import SkillWrap from "./SkillProgress/SkillWrap";
 import ProjectWrap from "./Project/ProjectWrap";
 import Intro from "./intro/Intro";
 import Contents from "./contents/Contents";
+import ContactWrap from "./ContactBoard/ContactWrap";
 
 export default function WrapComponents() {
   const menuState = useRecoilValue(MenuState);
@@ -45,12 +45,8 @@ export default function WrapComponents() {
       <div id="sliderSection" ref={sliderSectionRef}>
         <ProjectWrap />
       </div>
-      <div
-        id="contactSection"
-        ref={contactSectionRef}
-        style={{ paddingTop: "100px" }}
-      >
-        <Contact />
+      <div id="contactSection" ref={contactSectionRef}>
+        <ContactWrap />
       </div>
     </Wrap>
   );

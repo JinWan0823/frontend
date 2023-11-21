@@ -6,6 +6,7 @@ import { persistModeState } from "./State/MenuState";
 export interface GlobalStyleProps {
   bgcolor?: string;
   textColor?: string;
+  mode?: string;
 }
 
 export default function ThemeGlobalStyle() {
@@ -44,5 +45,8 @@ const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
     h1,h2,h3,h4,h5,h6 {
         font-family: "Oswald", sans-serif;
         font-weight:700;
+    }
+    p {
+      font-size:18rem;
     }
 `;
