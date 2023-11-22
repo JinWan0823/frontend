@@ -62,6 +62,29 @@ const Card = styled.li<GlobalStyleProps>`
     color: #fff;
   }
 
+  @media screen and (max-width: 1440px) {
+    height: 260px;
+    padding: 0px 10px;
+
+    h3 {
+      font-size: 24rem;
+    }
+    p {
+      font-size: 14rem;
+      margin-top: 4px;
+    }
+  }
+  @media screen and (max-width: 1240px) {
+    width: 50%;
+    h3 {
+      font-size: 28rem;
+    }
+    p {
+      margin-top: 8px;
+      font-size: 16rem;
+    }
+  }
+
   .img_box {
     width: 100%;
     height: 100%;
@@ -73,6 +96,7 @@ const Card = styled.li<GlobalStyleProps>`
     .info_box {
       width: 100%;
       height: 100%;
+      text-align: center;
       background-color: #0f0f0fd1;
       display: flex;
       align-items: center;

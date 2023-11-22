@@ -79,6 +79,10 @@ const ContentsWrap = styled.div<GlobalStyleProps>`
       font-size: 30rem;
       width: 140px;
       flex-shrink: 0;
+      @media screen and (max-width: 1440px) {
+        font-size: 22rem;
+        width: 110px;
+      }
     }
 
     .text {
@@ -87,6 +91,9 @@ const ContentsWrap = styled.div<GlobalStyleProps>`
         font-size: 18rem;
         line-height: 1.6;
         word-break: keep-all;
+        @media screen and (max-width: 1440px) {
+          font-size: 16rem;
+        }
       }
 
       a {

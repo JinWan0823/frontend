@@ -132,6 +132,9 @@ const MenuOverlay = styled.div`
         position: relative;
         text-decoration: none;
         font-size:110rem;
+        @media screen and (max-width: 1440px) {
+          font-size:80rem;
+        }
         cursor:pointer;
         &:hover {
           color:#b15e30

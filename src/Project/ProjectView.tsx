@@ -29,4 +29,8 @@ const ImgBox = styled.div`
   height: 520px;
   border-radius: 20px;
   overflow: hidden;
+
+  @media screen and (max-width: 1240px) {
+    width: 100%;
+  }
 `;

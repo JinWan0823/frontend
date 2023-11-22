@@ -58,4 +58,13 @@ const Contact = styled.div`
   .contact_rt {
     width: calc(100% - 580px);
   }
+
+  @media screen and (max-width: 1440px) {
+    .contact_lt {
+      display: none;
+    }
+    .contact_rt {
+      width: 100%;
+    }
+  }
 `;
