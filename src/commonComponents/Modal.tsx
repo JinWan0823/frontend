@@ -1,42 +1,23 @@
 import styled from "styled-components";
-import { useState, useEffect } from "react";
 
 interface ModalProps {
   handleModal: () => void;
   modalCategory: string;
+  text: string;
 }
 
-export default function Modal({ handleModal, modalCategory }: ModalProps) {
-  const [text, setText] = useState("");
-  const category = modalCategory;
-  useEffect(() => {
-    if (category === "Kakao") {
-      setText("카카오톡으로 연결하시겠습니까?");
-    } else {
-      setText("클립보드에 복사했습니다.");
-    }
-  }, [category]);
-
-  const linkKakao = () => {
-    const kakaoLink = "https://open.kakao.com/o/s3jITaMf";
-    window.open(kakaoLink, "_blank");
-    handleModal();
-  };
-
+export default function Modal({
+  modalCategory,
+  handleModal,
+  text,
+}: ModalProps) {
   return (
     <ModalWrap>
       <ModalComponent>
         <div className="modal-header">{modalCategory}</div>
         <div className="modal-content">
           <p>{text}</p>
-          {category === "Kakao" ? (
-            <div className="btn-wrap">
-              <button onClick={linkKakao}>확인</button>
-              <button onClick={handleModal}>취소</button>
-            </div>
-          ) : (
-            <button onClick={handleModal}>확인</button>
-          )}
+          <button onClick={() => handleModal()}>확인</button>
         </div>
       </ModalComponent>
     </ModalWrap>
@@ -44,11 +25,11 @@ export default function Modal({ handleModal, modalCategory }: ModalProps) {
 }
 
 const ModalWrap = styled.div`
-  width: 100%;
+  width: calc(100% - 100px);
   height: 100%;
   position: fixed;
   top: 0;
-  left: 0;
+  left: 100px;
   z-index: 9999999999999999;
   background-color: #0008;
   display: flex;
@@ -73,9 +54,10 @@ const ModalComponent = styled.div`
     padding: 10px;
     background-color: #fff;
     p {
-      font-size: 18rem;
+      font-size: 16rem;
       padding: 32px 0px;
       text-align: center;
+      color: #333;
     }
     button {
       width: 100%;

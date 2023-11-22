@@ -7,6 +7,8 @@ import ListData from "../../db";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
+import Modal from "../commonComponents/Modal";
+import { useState } from "react";
 interface ProjectInfoProps {
   data: CardProps;
 }
@@ -14,6 +16,12 @@ export default function ProjectNavi({ data }: ProjectInfoProps) {
   const currentMode = useRecoilValue(persistModeState);
   const bgcolor = currentMode.bgcolor;
   const textColor = currentMode.textColor;
+
+  const [modal, setModal] = useState(false);
+  const [notice, setNotice] = useState("");
+  const handleModal = () => {
+    setModal(false);
+  };
 
   const indexId = data.id;
   const length = ListData.portfolio.length;
@@ -23,7 +31,8 @@ export default function ProjectNavi({ data }: ProjectInfoProps) {
   const handlePrevProject = () => {
     const NowProject = indexId - 1;
     if (NowProject === 0) {
-      alert("첫번째 페이지입니다.");
+      setNotice("첫번째 페이지입니다.");
+      setModal(true);
       return;
     }
     navigate(`/project/${NowProject - 1}`);
@@ -32,27 +41,33 @@ export default function ProjectNavi({ data }: ProjectInfoProps) {
   const handleNextProject = () => {
     const NowProject = indexId - 1;
     if (NowProject >= length - 1) {
-      alert("마지막 페이지입니다.");
+      setNotice("마지막 페이지입니다.");
+      setModal(true);
       return;
     }
     navigate(`/project/${NowProject + 1}`);
   };
 
   return (
-    <Navi bgcolor={bgcolor} textColor={textColor}>
-      <Btn onClick={() => handlePrevProject()}>
-        <FontAwesomeIcon icon={faAngleLeft} />
-      </Btn>
-      <h4>
-        {data.title}
-        <span>
-          {indexId} / {length}
-        </span>
-      </h4>
-      <Btn onClick={() => handleNextProject()}>
-        <FontAwesomeIcon icon={faAngleRight} />
-      </Btn>
-    </Navi>
+    <>
+      {modal && (
+        <Modal modalCategory="NOTICE" handleModal={handleModal} text={notice} />
+      )}
+      <Navi bgcolor={bgcolor} textColor={textColor}>
+        <Btn onClick={() => handlePrevProject()}>
+          <FontAwesomeIcon icon={faAngleLeft} />
+        </Btn>
+        <h4>
+          {data.title}
+          <span>
+            {indexId} / {length}
+          </span>
+        </h4>
+        <Btn onClick={() => handleNextProject()}>
+          <FontAwesomeIcon icon={faAngleRight} />
+        </Btn>
+      </Navi>
+    </>
   );
 }
 
