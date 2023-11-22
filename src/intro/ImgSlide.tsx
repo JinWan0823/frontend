@@ -112,7 +112,7 @@ const Wrapper = styled.div`
   @media screen and (max-width: 1440px) {
     margin: 10px 0px;
     li img {
-      width: 490px;
+      width: 390px;
     }
   }
 `;

@@ -25,4 +25,7 @@ const Detail = styled.div`
   h2 {
     font-size: 60rem;
   }
+  @media screen and (max-width: 1240px) {
+    padding: 120px 20px;
+  }
 `;

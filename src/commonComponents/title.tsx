@@ -16,6 +16,6 @@ const Text = styled.h1`
   color: ${(props) => props.color};
 
   @media screen and (max-width: 1440px) {
-    font-size: 95rem;
+    font-size: 80rem;
   }
 `;

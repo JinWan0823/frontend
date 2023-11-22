@@ -61,9 +61,13 @@ const BarWrap = styled.li<{
   align-items: center;
   width: 100%;
   p {
-    font-size: 20rem;
+    font-size: 18rem;
     width: 140px;
     flex-shrink: 0;
+    @media screen and (max-width: 1440px) {
+      font-size: 16rem;
+      width: 100px;
+    }
   }
   .bar {
     width: 100%;

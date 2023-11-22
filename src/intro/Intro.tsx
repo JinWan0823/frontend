@@ -49,6 +49,11 @@ const IntroTitle = styled.h1`
   span {
     font-size: 40rem;
   }
+
+  @media screen and (max-width: 1440px) {
+    font-size: 30rem;
+    height: 180px;
+  }
 `;
 
 const TitleWrap = styled.div`
@@ -64,6 +69,7 @@ const TitleWrap = styled.div`
     letter-spacing: -1.2px;
     @media screen and (max-width: 1440px) {
       font-size: 26rem;
+      margin-right: 0px;
     }
   }
 `;

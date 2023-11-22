@@ -27,6 +27,10 @@ const SkillWrapper = styled.div`
     h2 {
       font-size: 30rem;
       width: 140px;
+      @media screen and (max-width: 1440px) {
+        font-size: 22rem;
+        width: 110px;
+      }
     }
   }
   .progress_wrap {
