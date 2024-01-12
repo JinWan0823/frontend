@@ -9,18 +9,34 @@ import Company from "./src/assets/thumb/enc_thumb.png";
 import Pureen from "./src/assets/thumb/pureen_thumb.png";
 import Jungwoo from "./src/assets/thumb/jungwoo_thumb.png";
 import Chat from "./src/assets/thumb/chat_thumb.png";
+import Todo from "./src/assets/thumb/todo_thumb.png";
 
 const ListData = {
   portfolio: [
     {
       id: 1,
+      title: "CALENDAR TODO",
+      thumb: Todo,
+      category: "Front-end",
+      mobile: false,
+      work: ["디자인 작업 (100%)", "UI/API 연동 개발 (100%)"],
+      content:
+        "Nextjs를 이용한 캘린더 투두리스트 웹 어플리케이션입니다. 개인 작업중인 프로젝트로 최대한 빠른 시일내에 완성할 예정입니다. ",
+      date: "2024.01 - 진행중",
+      github: "https://github.com/JinWan0823/todo_nextjs",
+      site: "https://todo-nextjs-plum.vercel.app/",
+      skill: "React / Javascript / Nextjs / TailWindCSS",
+    },
+    {
+      id: 2,
       title: "TEAM NENGTUL",
       thumb: Nengtul,
       category: "Front-end",
       mobile: false,
       work: [
         "디자인 작업 (100%)",
-        "로그인/유저 정보 관리, 레시피 관리 등 채팅,카카오맵 제외 100%",
+        "팀프로젝트 - 채팅,카카오맵 제외",
+        "로그인/유저 정보 관리, 레시피 관리 등 담당",
       ],
       content:
         "냉장고를 털어줘는 팀 프로젝트로 진행한 음식 레시피 추천 및 공유 커뮤니티 서비스입니다. 자신이 가진 재료를 이용해 맞춤 음식 레시피를 추천합니다. 디자인, 로그인, 정보관리, 재료검색, 레시피관리 등을 담당했습니다. 서버 비용 문제로 유튜브 동영상 참고 부탁드립니다.",
@@ -33,7 +49,7 @@ const ListData = {
       youtube: "https://www.youtube.com/watch?v=nAZUx73mwVU&t=71s",
     },
     {
-      id: 2,
+      id: 3,
       title: "TRIP TOGETHER",
       thumb: Triptogether,
       mobile: false,
@@ -54,7 +70,7 @@ const ListData = {
         "https://sapphire-loaf-f04.notion.site/Trip-Together-9b19a025516e465590ae4c824357f21c?pvs=4",
     },
     {
-      id: 3,
+      id: 4,
       title: "FACE MAKER",
       thumb: FaceMaker,
       category: "Front-end",
@@ -71,7 +87,7 @@ const ListData = {
       site: "https://face-maker.co.kr/",
     },
     {
-      id: 4,
+      id: 5,
       title: "GROUP CHAT",
       category: "Back-end",
       mobile: false,
@@ -84,7 +100,7 @@ const ListData = {
       site: "",
     },
     {
-      id: 5,
+      id: 6,
       title: "CAFE MAP",
       category: "Front-end",
       mobile: true,
@@ -101,7 +117,7 @@ const ListData = {
       site: "https://lemonjw2.iwinv.net/lm06/bbs/board.php?bo_table=map",
     },
     {
-      id: 6,
+      id: 7,
       title: "OLIVE RENTCAR",
       thumb: OliveRent,
       mobile: true,
@@ -114,7 +130,7 @@ const ListData = {
       site: "https://dhksl823.iwinv.net/rent/",
     },
     {
-      id: 7,
+      id: 8,
       title: "SUPER MODEL ARUM",
       category: "Front-end",
       mobile: true,
@@ -127,7 +143,7 @@ const ListData = {
       site: "https://ksarum.com/",
     },
     {
-      id: 8,
+      id: 9,
       title: "CAFE 382",
       category: "Front-end",
       mobile: true,
@@ -140,7 +156,7 @@ const ListData = {
       site: "https://lemonjw2.iwinv.net/lm05/",
     },
     {
-      id: 9,
+      id: 10,
       title: "E&C COMPANY",
       category: "Front-end",
       mobile: true,
@@ -152,7 +168,7 @@ const ListData = {
       site: "https://lemonjw2.iwinv.net/lm10/",
     },
     {
-      id: 10,
+      id: 11,
       title: "PUREEN SKIN CLINIC",
       category: "Front-end",
       mobile: true,
@@ -165,7 +181,7 @@ const ListData = {
       site: "https://lemonjw2.iwinv.net/lm09/",
     },
     {
-      id: 11,
+      id: 12,
       title: "JUNGWOO GROUP",
       category: "Front-end",
       mobile: true,
